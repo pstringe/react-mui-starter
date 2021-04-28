@@ -50,7 +50,8 @@ function App() {
   **  show - (boolean) determinse if the route should have a visible nav link
   **  component - React Component Object or JSX specifies the component to render when the route is accessed.
   */
- 
+  const siteTitle = 'React MUI Starter';
+  
   const routes = [
     {name: 'root', path: '/', component: <Home />, auth: false, show:false},
     {name: 'home', path: '/home', component: <Home />, auth: false, show:true},
@@ -61,7 +62,7 @@ function App() {
       <CssBaseline />
       <Box  className={`App ${classes.root}`} maxWidth='xl' >
         <Router>
-          <Header className={classes.header} title='DriveSafe' items={routes}/>
+          <Header className={classes.header} title={siteTitle} items={routes}/>
           <Container>
             <Switch>
               {routes.map((route, idx)=>{
